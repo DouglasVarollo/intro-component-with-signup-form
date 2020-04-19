@@ -146,6 +146,12 @@ main div.signup form div.input-group {
   display: block;
   margin-bottom: 20px;
 }
+main div.signup form div.input-group.error input {
+  border-color: #ff7a7a;
+}
+main div.signup form div.input-group.error input:focus {
+  border-color: #ff7a7a;
+}
 main div.signup form div.input-group.error div.input-error {
   display: block;
 }

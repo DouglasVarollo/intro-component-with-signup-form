@@ -119,6 +119,14 @@ main {
         margin-bottom: 20px;
 
         &.error {
+        	input {
+        		border-color: $Red;
+
+        		&:focus {
+            	border-color: $Red;
+            }
+        	}
+
           div.input-error {
             display: block;
           }
