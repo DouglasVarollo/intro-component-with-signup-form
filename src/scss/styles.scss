@@ -1,2 +1,204 @@
 @import "variables";
 @import "reset";
+@import "mixins";
+
+body {
+  color: #fff;
+  background: $Red url(../images/bg-intro-desktop.png) no-repeat center;
+
+  @include mobile {
+    background: $Red url(../images/bg-intro-mobile.png) no-repeat;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 165px;
+
+  @include desktop {
+    padding: 0 10%;
+  }
+
+  @include laptop {
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 5% 10%;
+  }
+
+  @include mobile {
+    padding: 25% 24px;
+  }
+
+  section.intro {
+    max-width: 555px;
+
+    @include desktop {
+      margin-right: 10%;
+    }
+
+    @include laptop {
+      margin-right: 0;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 10%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      line-height: 3.5rem;
+
+      @include desktop {
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+
+      @include laptop {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+      @include mobile {
+        font-size: 1.7rem;
+        line-height: 2.2rem;
+      }
+    }
+
+    p {
+      margin-top: calc(2rem - 2px);
+    }
+  }
+
+  div.signup {
+    display: flex;
+    flex-direction: column;
+    max-width: 555px;
+
+    div.trial {
+      max-width: 540px;
+      max-height: 60px;
+      padding: 20px 40px;
+      border-radius: 8px;
+      background-color: $Blue;
+      box-shadow: 0 8px 0px rgba(0, 0, 0, 0.2);
+      text-align: center;
+
+      @include mobile {
+        max-height: none;
+      }
+    }
+
+    form {
+      @include laptop {
+        width: auto;
+      }
+
+      @include mobile {
+        padding: 20px;
+      }
+
+      max-width: 540px;
+      width: 540px;
+      margin-top: 24px;
+      padding: 40px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 8px 0px rgba(0, 0, 0, 0.2);
+      text-align: center;
+
+      div.input-group {
+        position: relative;
+        display: block;
+        margin-bottom: 20px;
+
+        &.error {
+          div.input-error {
+            display: block;
+          }
+        }
+
+        input {
+          width: 100%;
+          max-height: 56px;
+          padding: 24px 32px;
+          border-radius: 4px;
+          font-weight: 500;
+          color: $DarkBlue;
+          border: 1px solid $GrayishBlue;
+
+          @include mobile {
+            padding: 24px 16px;
+          }
+
+          &:focus {
+            border-color: $Blue;
+          }
+
+          &::placeholder {
+            color: $DarkBlue;
+          }
+        }
+
+        div.input-error {
+          display: none;
+          text-align: right;
+
+          span {
+            color: $Red;
+          }
+
+          img {
+            position: absolute;
+            top: 17px;
+            right: 17px;
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        max-height: 56px;
+        margin-bottom: 15px;
+        padding: 14px 0;
+        border-radius: 4px;
+        letter-spacing: 1px;
+        color: #fff;
+        background-color: $Green;
+        border: 0;
+        border-bottom: 4px solid darken($Green, 10%);
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: lighten($Green, 10%);
+        }
+      }
+
+      span {
+        font-size: 0.8rem;
+        color: $GrayishBlue;
+
+        a {
+          color: $Red;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+
+  p {
+    a {
+      color: $Blue;
+    }
+  }
+}

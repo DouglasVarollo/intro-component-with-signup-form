@@ -22,4 +22,195 @@ button {
   cursor: pointer;
 }
 
+body {
+  color: #fff;
+  background: #ff7a7a url(../images/bg-intro-desktop.png) no-repeat center;
+}
+@media screen and (max-width: 425px) {
+  body {
+    background: #ff7a7a url(../images/bg-intro-mobile.png) no-repeat;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 165px;
+}
+@media screen and (max-width: 1366px) {
+  main {
+    padding: 0 10%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main {
+    flex-direction: column;
+    justify-content: center;
+    padding: 5% 10%;
+  }
+}
+@media screen and (max-width: 425px) {
+  main {
+    padding: 25% 24px;
+  }
+}
+main section.intro {
+  max-width: 555px;
+}
+@media screen and (max-width: 1366px) {
+  main section.intro {
+    margin-right: 10%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main section.intro {
+    margin-right: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  main section.intro {
+    margin-bottom: 10%;
+  }
+}
+main section.intro h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+@media screen and (max-width: 1366px) {
+  main section.intro h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main section.intro h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  main section.intro h1 {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+  }
+}
+main section.intro p {
+  margin-top: calc(2rem - 2px);
+}
+main div.signup {
+  display: flex;
+  flex-direction: column;
+  max-width: 555px;
+}
+main div.signup div.trial {
+  max-width: 540px;
+  max-height: 60px;
+  padding: 20px 40px;
+  border-radius: 8px;
+  background-color: #6055a5;
+  box-shadow: 0 8px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+@media screen and (max-width: 425px) {
+  main div.signup div.trial {
+    max-height: none;
+  }
+}
+main div.signup form {
+  max-width: 540px;
+  width: 540px;
+  margin-top: 24px;
+  padding: 40px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 8px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  main div.signup form {
+    width: auto;
+  }
+}
+@media screen and (max-width: 425px) {
+  main div.signup form {
+    padding: 20px;
+  }
+}
+main div.signup form div.input-group {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+main div.signup form div.input-group.error div.input-error {
+  display: block;
+}
+main div.signup form div.input-group input {
+  width: 100%;
+  max-height: 56px;
+  padding: 24px 32px;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #3e3c49;
+  border: 1px solid #b9b6d3;
+}
+@media screen and (max-width: 425px) {
+  main div.signup form div.input-group input {
+    padding: 24px 16px;
+  }
+}
+main div.signup form div.input-group input:focus {
+  border-color: #6055a5;
+}
+main div.signup form div.input-group input::placeholder {
+  color: #3e3c49;
+}
+main div.signup form div.input-group div.input-error {
+  display: none;
+  text-align: right;
+}
+main div.signup form div.input-group div.input-error span {
+  color: #ff7a7a;
+}
+main div.signup form div.input-group div.input-error img {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+}
+main div.signup form button {
+  width: 100%;
+  max-height: 56px;
+  margin-bottom: 15px;
+  padding: 14px 0;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #38cc8c;
+  border: 0;
+  border-bottom: 4px solid #2ba671;
+  text-transform: uppercase;
+}
+main div.signup form button:hover {
+  background-color: #61d6a3;
+}
+main div.signup form span {
+  font-size: 0.8rem;
+  color: #b9b6d3;
+}
+main div.signup form span a {
+  color: #ff7a7a;
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+}
+footer p a {
+  color: #6055a5;
+}
+
 /*# sourceMappingURL=styles.css.map */
